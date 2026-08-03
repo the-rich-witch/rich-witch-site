@@ -1,17 +1,17 @@
-RUKIYAH POLK WEBSITE — REBUILT
+RUKIYAH THE RICH WITCH — REDESIGNED WEBSITE
 
-Open index.html to preview the site.
+Open index.html to preview the website.
 
 Included:
-- index.html
-- the-rich-witch.html
-- money-pattern-quiz.html
-- blog.html
-- styles.css
-- site.js
-- assets folder
+- Full redesigned home page
+- Redesigned spiritual-practice page
+- Restyled money-pattern quiz
+- Approved Rukiyah portrait in /assets
+- Shared responsive stylesheet
 
 Before publishing:
-1. Replace placeholder social links (#) with live profile links.
-2. Replace mailto booking links with your scheduling/payment checkout link when ready.
-3. Upload the complete rich-witch-site folder to your web host.
+1. Replace the mailto form with your booking or email-service form if desired.
+2. Connect the Money Confessional buttons to your final booking link.
+3. Add your social links when finalized.
+
+No build tools are required. This is a static HTML website and can be uploaded directly to most web hosts.

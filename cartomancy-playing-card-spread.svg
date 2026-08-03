@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+<title id="t">Playing card cartomancy spread</title><desc id="d">A warm editorial photograph-like illustration of a five-card playing card layout on aged parchment with herbs, a candle, coins, and handwritten notes.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eadfc8"/><stop offset="1" stop-color="#cdbb98"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#2d1729" flood-opacity=".22"/></filter>
+ <filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
+ <pattern id="grain" width="80" height="80" patternUnits="userSpaceOnUse"><circle cx="12" cy="18" r="1" fill="#6b563f" opacity=".13"/><circle cx="62" cy="49" r="1" fill="#fff" opacity=".22"/><path d="M0 77 Q35 71 80 75" fill="none" stroke="#6b563f" opacity=".07"/></pattern>
+</defs>
+<rect width="1200" height="760" rx="42" fill="url(#bg)"/><rect width="1200" height="760" rx="42" fill="url(#grain)"/>
+<ellipse cx="870" cy="158" rx="165" ry="92" fill="#fff4cf" opacity=".35" filter="url(#soft)"/>
+<!-- candle -->
+<g transform="translate(930 74)" filter="url(#shadow)"><ellipse cx="76" cy="255" rx="84" ry="20" fill="#6b3d31" opacity=".28"/><rect x="32" y="86" width="88" height="170" rx="16" fill="#f1e4bf"/><path d="M76 80 C48 44 72 13 83 0 C106 37 105 63 76 80Z" fill="#d6772d"/><path d="M79 69 C68 50 79 36 84 29 C93 48 91 60 79 69Z" fill="#ffd67c"/><path d="M51 110 C65 127 86 121 99 111" stroke="#c9a45c" stroke-width="4" fill="none" opacity=".55"/></g>
+<!-- herbs -->
+<g stroke="#44634e" stroke-width="6" fill="none" opacity=".92"><path d="M94 635 C210 560 235 390 260 238"/><path d="M166 584 C130 541 123 497 130 458"/><path d="M196 528 C243 492 269 446 280 401"/></g>
+<g fill="#5b7a60"><ellipse cx="132" cy="563" rx="19" ry="45" transform="rotate(-42 132 563)"/><ellipse cx="178" cy="514" rx="18" ry="43" transform="rotate(28 178 514)"/><ellipse cx="221" cy="452" rx="18" ry="43" transform="rotate(-37 221 452)"/><ellipse cx="250" cy="364" rx="17" ry="40" transform="rotate(25 250 364)"/><ellipse cx="126" cy="473" rx="17" ry="38" transform="rotate(35 126 473)"/></g>
+<!-- cards -->
+<g font-family="Georgia,serif" filter="url(#shadow)">
+ <g transform="translate(255 205) rotate(-14)"><rect width="190" height="290" rx="18" fill="#fffaf0" stroke="#7b5a3d" stroke-width="3"/><text x="23" y="43" font-size="31" fill="#9e2e36">A</text><text x="23" y="75" font-size="34" fill="#9e2e36">♥</text><text x="95" y="170" text-anchor="middle" font-size="94" fill="#9e2e36">♥</text><text x="167" y="254" font-size="31" text-anchor="end" fill="#9e2e36">A</text><text x="167" y="282" font-size="34" text-anchor="end" fill="#9e2e36">♥</text></g>
+ <g transform="translate(398 174) rotate(-6)"><rect width="190" height="290" rx="18" fill="#fffaf0" stroke="#7b5a3d" stroke-width="3"/><text x="23" y="43" font-size="31" fill="#26212a">7</text><text x="23" y="75" font-size="34" fill="#26212a">♣</text><text x="95" y="115" text-anchor="middle" font-size="48">♣</text><text x="55" y="180" text-anchor="middle" font-size="48">♣</text><text x="135" y="180" text-anchor="middle" font-size="48">♣</text><text x="95" y="245" text-anchor="middle" font-size="48">♣</text></g>
+ <g transform="translate(548 162) rotate(2)"><rect width="190" height="290" rx="18" fill="#fffaf0" stroke="#7b5a3d" stroke-width="3"/><text x="23" y="43" font-size="31" fill="#9e2e36">Q</text><text x="23" y="75" font-size="34" fill="#9e2e36">♦</text><circle cx="95" cy="145" r="53" fill="#c89d43" opacity=".22"/><text x="95" y="167" text-anchor="middle" font-size="70" fill="#9e2e36">♦</text><text x="167" y="254" font-size="31" text-anchor="end" fill="#9e2e36">Q</text><text x="167" y="282" font-size="34" text-anchor="end" fill="#9e2e36">♦</text></g>
+ <g transform="translate(698 177) rotate(8)"><rect width="190" height="290" rx="18" fill="#fffaf0" stroke="#7b5a3d" stroke-width="3"/><text x="23" y="43" font-size="31" fill="#26212a">10</text><text x="23" y="75" font-size="34" fill="#26212a">♠</text><text x="62" y="134" font-size="40">♠</text><text x="128" y="134" font-size="40">♠</text><text x="62" y="204" font-size="40">♠</text><text x="128" y="204" font-size="40">♠</text><text x="95" y="170" text-anchor="middle" font-size="40">♠</text></g>
+ <g transform="translate(840 215) rotate(15)"><rect width="190" height="290" rx="18" fill="#fffaf0" stroke="#7b5a3d" stroke-width="3"/><text x="23" y="43" font-size="31" fill="#9e2e36">3</text><text x="23" y="75" font-size="34" fill="#9e2e36">♥</text><text x="95" y="105" text-anchor="middle" font-size="48" fill="#9e2e36">♥</text><text x="60" y="185" text-anchor="middle" font-size="48" fill="#9e2e36">♥</text><text x="130" y="185" text-anchor="middle" font-size="48" fill="#9e2e36">♥</text></g>
+</g>
+<!-- coins and notes -->
+<g fill="#c49a3a" stroke="#8c6727" stroke-width="3"><circle cx="1035" cy="610" r="35"/><circle cx="975" cy="650" r="29"/><circle cx="1090" cy="662" r="24"/></g>
+<g font-family="cursive" fill="#563a4e"><text x="110" y="115" font-size="38" transform="rotate(-5 110 115)">What is active here?</text><path d="M125 130 Q250 150 330 126" stroke="#a44d43" stroke-width="4" fill="none"/><text x="765" y="610" font-size="31" transform="rotate(4 765 610)">listen for the pattern</text></g>
+<path d="M445 610 C530 575 615 608 695 570" stroke="#9b7560" stroke-width="3" fill="none" stroke-dasharray="8 9"/>
+<circle cx="695" cy="570" r="8" fill="#9b7560"/>
+</svg>
