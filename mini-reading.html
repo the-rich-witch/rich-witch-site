@@ -1,0 +1,220 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Try a Mini Reading | The Rich Witch</title><meta name="description" content="Draw three cards and get a short reflection for each: what you're doing, why you're doing it, and what comes next. A small taste of cartomancy, free."><link rel="stylesheet" href="styles.css"></head><body>
+<header class="site-header"><nav class="wrap nav" aria-label="Primary navigation"><a class="brand" href="index.html"><span>Rukiyah</span><em>The Rich Witch</em></a><button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button><ul class="navlinks"><li><a href="index.html">Home</a></li><li><a href="cartomancy.html">Divination</a></li><li><a href="rootwork.html">Rootwork</a></li><li><a href="shop.html">Shop</a></li><li><a href="about.html">About</a></li></ul><a class="button nav-cta" href="cartomancy.html">Book a Reading</a></nav></header>
+<main>
+
+<section class="chapter" style="padding-top:110px;padding-bottom:20px"><div class="wrap narrow center"><span class="script gold-script">A small taste, free.</span><span class="eyebrow">Try It Now</span><h1>Draw Three Cards</h1><p class="lead" style="margin-inline:auto">Pull three cards and get a short reflection for each: what you're doing, why you're doing it, and what comes next. It's not a full reading — just a place to start.</p></div></section>
+
+<section class="soft chapter" style="padding-top:0">
+  <div class="mini-reading-stage">
+    <div class="three-card-row">
+      <div class="card-slot">
+        <div class="card-deck" id="cardDeck1" role="button" tabindex="0" aria-label="Draw card one">
+          <div class="card-inner" id="cardInner1">
+            <div class="card-back"><div class="card-back-pattern">✦</div></div>
+            <div class="card-front"><div class="card-rank" id="cardRank1">A</div><div class="card-suit-symbol" id="cardSuitSymbol1">♠</div></div>
+          </div>
+        </div>
+        <span class="card-position-label">What You're Doing</span>
+        <div class="card-result" id="cardResult1"><span class="element-label" id="elementLabel1"></span><p class="reading-prompt-mini" id="readingPrompt1"></p></div>
+      </div>
+      <div class="card-slot">
+        <div class="card-deck" id="cardDeck2" role="button" tabindex="0" aria-label="Draw card two">
+          <div class="card-inner" id="cardInner2">
+            <div class="card-back"><div class="card-back-pattern">✦</div></div>
+            <div class="card-front"><div class="card-rank" id="cardRank2">A</div><div class="card-suit-symbol" id="cardSuitSymbol2">♠</div></div>
+          </div>
+        </div>
+        <span class="card-position-label">Why You're Doing It</span>
+        <div class="card-result" id="cardResult2"><span class="element-label" id="elementLabel2"></span><p class="reading-prompt-mini" id="readingPrompt2"></p></div>
+      </div>
+      <div class="card-slot">
+        <div class="card-deck" id="cardDeck3" role="button" tabindex="0" aria-label="Draw card three">
+          <div class="card-inner" id="cardInner3">
+            <div class="card-back"><div class="card-back-pattern">✦</div></div>
+            <div class="card-front"><div class="card-rank" id="cardRank3">A</div><div class="card-suit-symbol" id="cardSuitSymbol3">♠</div></div>
+          </div>
+        </div>
+        <span class="card-position-label">What Comes Next</span>
+        <div class="card-result" id="cardResult3"><span class="element-label" id="elementLabel3"></span><p class="reading-prompt-mini" id="readingPrompt3"></p></div>
+      </div>
+    </div>
+
+    <p class="draw-hint" id="drawHint">Tap each card to draw it.</p>
+
+    <div class="pattern-note" id="patternNote"><p class="pattern-text" id="patternText"></p></div>
+
+    <div class="mini-actions" id="miniActions" style="opacity:0;transition:.5s">
+      <button class="button light" id="drawAgainBtn" type="button">Draw Again</button>
+      <a class="button gold" href="cartomancy.html">Get the Full Picture — Book a Reading</a>
+    </div>
+  </div>
+</section>
+
+<section class="chapter"><div class="wrap narrow center"><span class="script">One more thing</span><h2>This is a glimpse, not a reading.</h2><p class="lead" style="margin-inline:auto">A real reading starts with your actual question, then looks at where each card falls, the cards around it, the patterns across the spread, and the larger story they tell together.</p></div></section>
+
+<section class="soft chapter"><div class="wrap narrow center"><span class="script gold-script">Want to go deeper?</span><h2>Get the free guide: How to Ask a Better Question.</h2><p class="lead" style="margin-inline:auto">A short guide to bringing a real, useful question into your next reading.</p><a class="button gold" href="assets/how-to-ask-a-better-question.pdf" target="_blank" rel="noopener">Download the Guide</a></div></section>
+
+</main><footer><div class="wrap"><div class="footer-symbols">☾ ✦ ❧ ✧</div><strong>Rukiyah | The Rich Witch</strong><p>See what's happening. Know what to do next.</p></div></footer>
+<script src="site.js"></script>
+<script>
+const SUITS = [
+  { name: 'Spades', symbol: '♠', class: 'suit-spades', element: 'Air' },
+  { name: 'Clubs', symbol: '♣', class: 'suit-clubs', element: 'Fire' },
+  { name: 'Hearts', symbol: '♥', class: 'suit-hearts', element: 'Water' },
+  { name: 'Diamonds', symbol: '♦', class: 'suit-diamonds', element: 'Earth' }
+];
+const RANKS = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+
+// Prompts are keyed by position (1 = What You're Doing, 2 = Why You're Doing It, 3 = What Comes Next)
+// then by element, so the same element reads differently depending on its position.
+const PROMPTS = {
+  1: {
+    Air: [
+      "Air here says the doing is mostly happening in your head right now — turning it over, talking it through, working out what to think.",
+      "Air points to communication as the actual action — a conversation, a message, or a decision about what to say."
+    ],
+    Fire: [
+      "Fire here says you're already in motion — this is about action, effort, or work you're putting in.",
+      "Fire points to drive. What you're doing right now takes real energy and initiative."
+    ],
+    Water: [
+      "Water here says what you're doing is emotional work — processing a feeling, tending a relationship, staying present.",
+      "Water points to connection. The doing here is about how you're showing up for someone, including yourself."
+    ],
+    Earth: [
+      "Earth here says what you're doing is practical — handling resources, money, or something concrete.",
+      "Earth points to the material side. This is about what's actually in front of you to manage."
+    ]
+  },
+  2: {
+    Air: [
+      "Air here says the reason lives in your thinking — a belief, a worry, or something you need to understand.",
+      "Air points to a mental need: clarity, being heard, or making sense of something."
+    ],
+    Fire: [
+      "Fire here says the reason is about drive — something you want to move toward.",
+      "Fire points to motivation. You're doing this because you want to act, not wait."
+    ],
+    Water: [
+      "Water here says the reason is emotional — a feeling underneath the situation that's driving it.",
+      "Water points to connection as the reason. This matters because of how it affects a relationship."
+    ],
+    Earth: [
+      "Earth here says the reason is practical — stability, security, or something concrete you need.",
+      "Earth points to necessity. You're doing this because it needs to be done, plainly."
+    ]
+  },
+  3: {
+    Air: [
+      "Air here points to a conversation or decision still ahead — something to think through or say.",
+      "Air points to clarity coming next: a realization, or a choice about what to think."
+    ],
+    Fire: [
+      "Fire here points to action ahead — a step you'll need to take.",
+      "Fire points to momentum. What comes next asks you to move, not wait."
+    ],
+    Water: [
+      "Water here points to an emotional next step — a conversation, or simply feeling it through.",
+      "Water points to connection ahead — with someone else, or with yourself."
+    ],
+    Earth: [
+      "Earth here points to something practical ahead — a concrete step, a resource, a plan.",
+      "Earth points to what's next in real terms: something you can actually do."
+    ]
+  }
+};
+
+function buildDeck() {
+  const deck = [];
+  SUITS.forEach(suit => RANKS.forEach(rank => deck.push({ suit, rank })));
+  return deck;
+}
+
+let deck = buildDeck();
+const drawnSlots = { 1: false, 2: false, 3: false };
+const drawnElements = {};
+const hintEl = document.getElementById('drawHint');
+const actionsEl = document.getElementById('miniActions');
+const patternNoteEl = document.getElementById('patternNote');
+const patternTextEl = document.getElementById('patternText');
+
+function drawCardFor(i) {
+  if (drawnSlots[i]) return;
+  drawnSlots[i] = true;
+
+  const idx = Math.floor(Math.random() * deck.length);
+  const card = deck.splice(idx, 1)[0];
+  drawnElements[i] = card.suit.element;
+
+  const deckEl = document.getElementById('cardDeck' + i);
+  const rankEl = document.getElementById('cardRank' + i);
+  const suitEl = document.getElementById('cardSuitSymbol' + i);
+  rankEl.textContent = card.rank;
+  suitEl.textContent = card.suit.symbol;
+  suitEl.className = 'card-suit-symbol ' + card.suit.class;
+  deckEl.classList.add('flipped', 'drawn');
+
+  setTimeout(() => {
+    const prompts = PROMPTS[i][card.suit.element];
+    const prompt = prompts[Math.floor(Math.random() * prompts.length)];
+    document.getElementById('elementLabel' + i).textContent = card.suit.element;
+    document.getElementById('readingPrompt' + i).textContent = prompt;
+    document.getElementById('cardResult' + i).classList.add('visible');
+    checkComplete();
+  }, 450);
+}
+
+function buildPatternText() {
+  const els = [drawnElements[1], drawnElements[2], drawnElements[3]];
+  const counts = {};
+  els.forEach(e => counts[e] = (counts[e] || 0) + 1);
+  const uniqueCount = Object.keys(counts).length;
+
+  let pattern = '';
+  if (uniqueCount === 1) {
+    pattern = `All three cards share the same element: ${els[0]}. That's a strong, repeated thread running through this — worth paying attention to on its own.`;
+  } else if (uniqueCount === 2) {
+    const repeated = Object.keys(counts).find(e => counts[e] === 2);
+    pattern = `Two of your three cards share the same element: ${repeated}. When an element repeats, it's usually pointing at something worth noticing.`;
+  } else {
+    pattern = `Your three cards touch three different elements — ${els.join(', ')}. Each one is speaking to a different part of the situation.`;
+  }
+
+  pattern += ' A card doesn\'t speak on its own. A full reading looks at your actual question, where each card falls, the cards around it, and the larger story they tell together — not just one card by itself.';
+  return pattern;
+}
+
+function checkComplete() {
+  const remaining = Object.values(drawnSlots).filter(v => !v).length;
+  if (remaining === 0) {
+    hintEl.textContent = 'Your three cards';
+    patternTextEl.textContent = buildPatternText();
+    patternNoteEl.classList.add('visible');
+    actionsEl.style.opacity = '1';
+  } else {
+    hintEl.textContent = remaining + ' card' + (remaining > 1 ? 's' : '') + ' left to draw';
+  }
+}
+
+[1, 2, 3].forEach(i => {
+  const el = document.getElementById('cardDeck' + i);
+  el.addEventListener('click', () => drawCardFor(i));
+  el.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); drawCardFor(i); }
+  });
+});
+
+document.getElementById('drawAgainBtn').addEventListener('click', () => {
+  deck = buildDeck();
+  [1, 2, 3].forEach(i => {
+    drawnSlots[i] = false;
+    delete drawnElements[i];
+    document.getElementById('cardDeck' + i).classList.remove('flipped', 'drawn');
+    document.getElementById('cardResult' + i).classList.remove('visible');
+  });
+  patternNoteEl.classList.remove('visible');
+  actionsEl.style.opacity = '0';
+  hintEl.textContent = 'Tap each card to draw it.';
+});
+</script>
+</body></html>
